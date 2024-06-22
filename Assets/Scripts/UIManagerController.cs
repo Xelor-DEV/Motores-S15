@@ -24,6 +24,10 @@ public class UIManagerController : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private Ease ease;
     [SerializeField] private float initialY;
+    private void OnEnable()
+    {
+        NPCController.dialogueRequested += ShowDialogueInCanvas;
+    }
     public Image ImageFade
     {
         get

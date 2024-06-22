@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
+using System;
 
 public class NPCController : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class NPCController : MonoBehaviour
     [SerializeField] private NPCData data;
     private bool isInteracting = false;
     private bool isPlayerInRange = false;
-    public UnityEvent<NPCData> dialogueRequested; 
+    public static Action<NPCData> dialogueRequested;
     public bool IsPlayerInRange
     {
         get 
